@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pasovo – Forex signals & begeleiding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="Pasovo helpt je starten met forex trading via signals, uitleg en NL-support. Geen onzin, geen winstbeloftes.">
+
+  <!-- Open Graph / Telegram preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pasovo – Start met forex signals + uitleg">
+  <meta property="og:description" content="NL-community met forex signals, educatie en begeleiding. Geen onzin, geen winstbeloftes.">
+  <!-- TODO: vervang deze URL door een eigen afbeelding op jouw domein -->
+  <meta property="og:image" content="https://jouwdomein.nl/images/pasovo-preview.jpg">
+  <meta property="og:url" content="https://pasovo.nl/start">
+
+  <!-- Favicon (optioneel) -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+
+  <style>
+    :root {
+      --bg: #050712;
+      --bg-card: #0b0f1e;
+      --primary: #8b5cf6; /* paars */
+      --accent: #22c55e;  /* groen */
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2933;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #a855f7, #4f46e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 18px;
+    }
+
+    .shell {
+      background: rgba(8, 11, 25, 0.85);
+      border-radius: 28px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.9);
+      padding: 28px 20px 22px;
+      backdrop-filter: blur(18px);
+    }
+
+    @media (min-width: 768px) {
+      .shell {
+        padding: 32px 32px 26px;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+        gap: 32px;
+      }
+    }
+
+    .hero-title {
+      font-size: 28px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 32px;
+      }
+    }
+
+    .hero-highlight {
+      color: var(--primary);
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .badge {
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 11px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #a855f7, #4f46e5);
+      color: white;
+      box-shadow: 0 14px 35px rgba(79, 70, 229, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(79, 70, 229, 0.75);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.5);
+      color: var(--text-main);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(248, 250, 252, 0.8);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-footnote {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .steps-card {
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      padding: 14px 14px 12px;
+      margin-bottom: 12px;
+    }
+
+    .steps-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .steps-list {
+      list-style: none;
+      font-size: 13px;
+      color: var(--text-main);
+    }
+
+    .steps-list li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+      align-items: flex-start;
+    }
+
+    .steps-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .small-muted {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-muted);
+    }
+
+    .risk-box {
+      border-radius: 16px;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      padding: 10px 12px;
+      background: rgba(127, 29, 29, 0.15);
+      font-size: 11px;
+      color: #fecaca;
+      margin-top: 10px;
+    }
+
+    .right-panel {
+      margin-top: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .right-panel {
+        margin-top: 0;
+      }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      padding: 14px 14px 12px;
+      font-size: 12px;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card ul li {
+      margin-bottom: 4px;
+      color: var(--text-muted);
+    }
+
+    .faq-item {
+      margin-bottom: 8px;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    .faq-a {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .footer {
+      margin-top: 12px;
+      font-size: 10px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="logo">
+      <div class="logo-mark">P</div>
+      <div class="logo-text">Pasovo</div>
+    </div>
+
+    <section class="shell">
+      <div class="content">
+        <!-- LEFT: hero & uitleg -->
+        <div>
+          <h1 class="hero-title">
+            Nuchtere <span class="hero-highlight">forex signals</span> met NL-begeleiding
+          </h1>
+          <p class="hero-sub">
+            Geen magische knop of Lambo-praat. Pasovo combineert trading signals met uitleg
+            en support, zodat je begrijpt wat je doet en zélf keuzes blijft maken.
+          </p>
+
+          <div class="badges">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Forex & MetaTrader focus
+            </div>
+            <div class="badge">
+              ✅ Geen winstbeloftes
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <!-- TODO: vervang met jouw echte Telegram links -->
+            <a href="https://t.me/+zVRPYhAqGkVkMTAy" class="btn btn-primary">
+              🎧 Start gratis via Telegram
+            </a>
+            <a href="#stappen" class="btn btn-ghost">
+              📋 Bekijk eerst de stappen
+            </a>
+          </div>
+
+          <p class="hero-footnote">
+            Liever 1-op-1 geholpen worden met een account & broker?
+            Stuur een bericht naar onze support via Telegram.
+          </p>
+
+          <div class="steps-card" id="stappen">
+            <div class="steps-title">Zo werkt starten met Pasovo:</div>
+            <ul class="steps-list">
+              <li>
+                <span class="steps-badge">1</span>
+                <span>Join het gratis Telegram kanaal voor updates, uitleg en sfeer.</span>
+              </li>
+              <li>
+                <span class="steps-badge">2</span>
+                <span>Open via onze funnel een trading account bij een geschikte broker.</span>
+              </li>
+              <li>
+                <span class="steps-badge">3</span>
+                <span>Koppel MetaTrader en volg stap voor stap de signals & uitleg.</span>
+              </li>
+            </ul>
+            <p class="small-muted">
+              Je houdt altijd zelf de controle. Onze content is educatief en géén persoonlijk advies.
+            </p>
+          </div>
+
+          <div class="pill-row">
+            <div class="pill">Forex only</div>
+            <div class="pill">MetaTrader 4/5</div>
+            <div class="pill">NL-support</div>
+          </div>
+
+          <div class="risk-box">
+            ⚠️ <strong>Risicowaarschuwing:</strong> Trading met leverage is risicovol en niet voor iedereen geschikt.
+            Je kunt (een deel van) je inleg verliezen. Zie dit niet als “snel rijk worden”, maar als een activiteit
+            waarbij je alleen geld gebruikt dat je kunt missen.
+          </div>
+        </div>
+
+        <!-- RIGHT: waarom / FAQ -->
+        <aside class="right-panel">
+          <div class="card">
+            <h3>Wat je wél krijgt</h3>
+            <ul>
+              <li>• Forex trading signals + context</li>
+              <li>• Uitleg in normaal Nederlands</li>
+              <li>• Support via Telegram</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Wat je níet krijgt</h3>
+            <ul>
+              <li>• Geen gegarandeerde winsten</li>
+              <li>• Geen advies welke lot size jij “moet” nemen</li>
+              <li>• Geen “word snel rijk” beloftes</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Veelgestelde vragen</h3>
+            <div class="faq-item">
+              <p class="faq-q">Is dit financieel advies?</p>
+              <p class="faq-a">Nee. Alles is educatief en algemeen. Jij blijft altijd zelf verantwoordelijk voor je beslissingen.</p>
+            </div>
+            <div class="faq-item">
+              <p class="faq-q">Moet ik al ervaring hebben?</p>
+              <p class="faq-a">Nee, maar je moet wél bereid zijn om te leren. We verwachten geen pro’s, maar wel serieusheid.</p>
+            </div>
+            <div class="faq-item">
+              <p class="faq-q">Hoeveel heb ik minimaal nodig?</p>
+              <p class="faq-a">Er is geen vast bedrag; het moet altijd geld zijn dat je kunt missen. In de funnel leggen we uit waar je op moet letten.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Volgende stap</h3>
+            <p class="faq-a" style="margin-bottom:8px;">
+              Klaar om het rustig en nuchter aan te pakken?
+            </p>
+            <a href="https://t.me/+zVRPYhAqGkVkMTAy" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:6px;">
+              🎧 Join gratis Telegram kanaal
+            </a>
+            <a href="https://t.me/pasovo_support_bot" class="btn btn-ghost" style="width:100%; justify-content:center;">
+              💬 Chat met support
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <p class="footer">
+      © <span id="year"></span> Pasovo. Geen financieel advies. Geen winstgaranties.
+    </p>
+  </main>
+
+  <script>
+    // Jaar in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
